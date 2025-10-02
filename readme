@@ -1,0 +1,76 @@
+# 🛡️ User Authentication & Authorization with JWT (Node.js + Express + MongoDB)
+
+This project demonstrates how to implement **user authentication and authorization** using **JWT Bearer Tokens** in a Node.js application following the **MVC pattern**.  
+It includes user registration, login, password hashing, protected routes, and token-based access control — all documented and testable via **Postman**.
+
+**Postman Documentation**
+https://.postman.co/workspace/My-Workspace~2149278c-1536-4e00-85db-649400f80d1f/request/40357180-f2a935f4-fd15-4976-9d97-8d41ac424110?action=share&creator=40357180&ctx=documentation
+---
+
+## 🚀 Features
+
+- 👤 **User Registration** – create a new account with hashed password  
+- 🔑 **User Login** – validate credentials and generate JWT  
+- 🪪 **JWT Authentication** – secure endpoints with Bearer token  
+- 🔒 **Protected Routes** – access user info only with a valid token  
+- 📁 **MVC Pattern** – clean, scalable code structure  
+- 📬 **Postman Documentation** – ready-to-test API endpoints  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Node.js** – server runtime  
+- **Express.js** – web framework  
+- **MongoDB + Mongoose** – database and ODM  
+- **JWT (jsonwebtoken)** – authentication tokens  
+- **bcryptjs** – password hashing  
+- **dotenv** – environment variables  
+- **Postman** – API testing
+
+---
+
+## 📂 Project Structure
+
+project/
+├─ controllers/
+│ ├─ authController.js
+│ └─ userController.js
+├─ models/
+│ └─ User.js
+├─ routes/
+│ ├─ authRoutes.js
+│ └─ userRoutes.js
+├─ middleware/
+│ └─ authMiddleware.js
+├─ config/
+│ └─ db.js
+├─ server.js
+├─ .env
+└─ README.md
+
+
+---
+
+## ⚙️ Setup & Installation
+
+1. **Clone the repository:**
+
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+2. **Install dependencies:**
+
+npm install
+
+
+3. **Create a .env file in the root folder:**
+
+PORT=8080
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+JWT_EXPIRES_IN=1d
+
+4. **Run the server:**
+
+npm run dev
