@@ -102,4 +102,8 @@ export const getUserInfo = async (req, res) => {
 
 export const getalluser=async(req,res)=>{
   const  data=RegisterSchema.find()
+  res.status(200).json({
+    message:"Get all user",
+    data:data
+  })
 }
