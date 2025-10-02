@@ -99,3 +99,7 @@ export const getUserInfo = async (req, res) => {
 };
 
 
+
+export const getalluser=async(req,res)=>{
+  const  data=RegisterSchema.find()
+}
