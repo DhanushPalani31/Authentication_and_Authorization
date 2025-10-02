@@ -100,10 +100,15 @@ export const getUserInfo = async (req, res) => {
 
 
 
-export const getalluser=async(req,res)=>{
-  const  data=RegisterSchema.find()
-  res.status(200).json({
-    message:"Get all user",
-    data:data
-  })
-}
+export const getAllUsers = async (req, res) => {
+  try {
+    const data = await RegisterSchema.find().select("-password");
+    res.status(200).json({
+      message: "All users retrieved successfully",
+      users: data
+    });
+  } catch (err) {
+    console.error("Error in getAllUsers:", err.message);
+    res.status(500).json({ message: "Server error" });
+  }
+};
